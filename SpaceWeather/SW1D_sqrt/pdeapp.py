@@ -9,7 +9,7 @@ import numpy as np
 import os
 
 # Add Exasim to Python search path
-cdir = '/Users/oissan/PycharmProjects/Exasim/Applications/SpaceWeather/SW1D_sqrt';
+cdir = '/Users/oissan/PycharmProjects/Exasim/Applications/SpaceWeather/SW1D_sqrt'
 ii = cdir.find("Exasim")
 exec(open(cdir[0:(ii + 6)] + "/Installation/setpath.py").read())
 
@@ -37,7 +37,7 @@ pde["soltime"] = 360 * np.arange(1, 241)  # steps at which solution are collecte
 pde["timestepOffset"] = 0
 
 # Vectors of physical and external parameters
-# [gam Gr Pr Fr Keuv  M  rho T0 T1 R0 R1 H EUVeff model longitude latitude declinationSun tauA t0];
+# [gam Gr Pr Fr Keuv  M  rho T0 T1 R0 R1 H EUVeff model longitude latitude declinationSun tauA t0]
 pde["physicsparam"] = np.loadtxt('inputs/physparam.csv', delimiter=',')
 
 # External params (EUV)  [lambda,crossSections,AFAC,F74113]
